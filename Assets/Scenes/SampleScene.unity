@@ -273,6 +273,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tile: {fileID: 1407896278922734, guid: 145640b335dd74fb087941342448ef65, type: 2}
-  columbs: 3
-  rows: 3
-  tiles: []
+  columbLength: 3
+  rowLength: 3
+  numMin: 1
+  numMax: 5
+  difficulty: 4
+  boardTiles: []
+  answerTiles: []
+  columbAnswerNums: 
+  rowAnswerNums: 
+  puzzlePieces: 
