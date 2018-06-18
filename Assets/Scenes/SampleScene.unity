@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 993554014}
   - component: {fileID: 993554013}
   - component: {fileID: 993554015}
+  - component: {fileID: 993554016}
   m_Layer: 8
   m_Name: 3 by 3 Board
   m_TagString: Board
@@ -278,8 +279,20 @@ MonoBehaviour:
   numMin: 1
   numMax: 5
   difficulty: 4
+  puzzlePieceCounter: 0
   boardTiles: []
   answerTiles: []
   columbAnswerNums: 
   rowAnswerNums: 
-  puzzlePieces: 
+  puzzlePieces: []
+--- !u!114 &993554016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993554012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21db50160975d493c90e31b0da71d987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,8 @@ public class boardControl : MonoBehaviour {
     public int numMax;
     public int difficulty;
 
+    public int puzzlePieceCounter = 0;
+
     private float spaceingFactor = 1.6F;
 
     //Lists of tiles
@@ -25,18 +27,18 @@ public class boardControl : MonoBehaviour {
     public int[] rowAnswerNums;
 
     //Store puzzle pieces
-    public int[,] puzzlePieces;
+    public List<GameObject> puzzlePieces;
 
 	// Use this for initialization
 	void Start () {
         boardNumsArray = new int[rowLength, columbLength];
         columbAnswerNums = new int[rowLength];
         rowAnswerNums = new int[columbLength];
-        puzzlePieces = new int[rowLength, columbLength];
         InitializeBoardTiles();
         InitializeRowAnswerTiles();
         InitializeColumbAnswerTiles();
         SelectPuzzleTiles();
+        RepositionPuzzleTiles();
 	}
 
     // Update is called once per frame
@@ -65,9 +67,7 @@ public class boardControl : MonoBehaviour {
                 //Add each random number to a 2d array
                 boardNumsArray[x, y] = currentBoardTile.transform./*FindChild("Number").*/GetComponentInChildren<tileNumber>().number;
 
-                //print("Array " + boardNumsArray[x, y]);
-
-                //Add each tile to a list
+                //Add each tile to an array
                 boardTiles.Add(currentBoardTile);
             }
         }
@@ -109,10 +109,31 @@ public class boardControl : MonoBehaviour {
 
     private void SelectPuzzleTiles()
     {
-        for (int i = 0; i <= difficulty; i++)
+        for (int i = 0; i < difficulty; i++)
         {
-            /*puzzlePieces[i,i] = boardNumsArray[Random.Range(0, rowLength), Random.Range(0, columbLength)];
-            print("Puzzle Pieces " + puzzlePieces[i]);*/
+            //Establish a random number
+            int randomIndex = Random.Range(0, boardTiles.Count);
+
+            //Move tiles from board list to puzzle list
+            puzzlePieces.Add(boardTiles[randomIndex]);
+            boardTiles.RemoveAt(randomIndex);
+        }
+    }
+
+    private void RepositionPuzzleTiles()
+    {
+        for (int x = 0; x < 2; x++)
+        {
+            for (int y = 0; y < 3; y++)
+            {
+                Vector3 pos = new Vector3(((x - 4) * spaceingFactor), ((y - 1) * spaceingFactor), -1F);
+                puzzlePieces[puzzlePieceCounter].transform.position = pos;
+
+                if (puzzlePieceCounter < difficulty - 1)
+                {
+                    puzzlePieceCounter++;
+                }
+            }
         }
     }
 }
