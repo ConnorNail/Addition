@@ -59,12 +59,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DragAndDropControl.cs" />
     <Compile Include="Assets\Scripts\boardControl.cs" />
+    <Compile Include="Assets\Scripts\Draggable.cs" />
+    <Compile Include="Assets\Scripts\DropControl.cs" />
     <Compile Include="Assets\Scripts\tileNumber.cs" />
-    <Compile Include="Assets\SimpleDragAndDrop\Scripts\DragAndDropCell.cs" />
-    <Compile Include="Assets\SimpleDragAndDrop\Scripts\DragAndDropItem.cs" />
-    <Compile Include="Assets\SimpleDragAndDrop\Scripts\DummyControlUnit.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/connornail/Documents/Unity Projects/Addition/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -114,6 +114,9 @@ public class boardControl : MonoBehaviour {
             //Establish a random number
             int randomIndex = Random.Range(0, boardTiles.Count);
 
+            //Add Dragabble Stuff
+            boardTiles[randomIndex].AddComponent<Draggable>();
+
             //Move tiles from board list to puzzle list
             puzzlePieces.Add(boardTiles[randomIndex]);
             boardTiles.RemoveAt(randomIndex);

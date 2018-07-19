@@ -39,9 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Board
+    uniqueID: 1454777939
+    locked: 0
+  - name: Tile
+    uniqueID: 2052782699
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Numbers
-    uniqueID: 1771134779
+  - name: PuzzlePieces
+    uniqueID: 883536195
     locked: 0
