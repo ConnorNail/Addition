@@ -37,21 +37,20 @@ public class Draggable : MonoBehaviour {
         //Increase scale of tile while being dragged
         transform.localScale = new Vector3(xScale + scaleInc, yScale + scaleInc, 1F);
 
-        //Find cell that the mous is over
+        //Find cell that the mouse is over
         cell = GameObject.Find("Dropping Cell");
 
         //Snap tile into place on drag over cell
-        if (cellDetect == null) {
-            print("null right now");
+        if (cell == null) {
+            transform.position = objectPos;
         } else {
             cellDetect = cell.GetComponent<DropControl>().cellDetect;
+            print(cellDetect);
         }
 
         if (cellDetect == true) {
-            print("True");
             transform.position = cell.GetComponent<DropControl>().cellPos;
         } else {
-            print("False");
             transform.position = objectPos;
         }
     }

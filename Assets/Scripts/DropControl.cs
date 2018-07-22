@@ -15,7 +15,7 @@ public class DropControl : MonoBehaviour
 
     private void OnMouseOver()
     {
-        print(gameObject.name);
+        //print(gameObject.name);
 
         cellPos = new Vector2(transform.position.x, transform.position.y);
 
