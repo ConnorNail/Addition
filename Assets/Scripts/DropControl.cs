@@ -10,7 +10,7 @@ public class DropControl : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        cellDetect = true;
+        
     }
 
     private void OnMouseOver()
@@ -24,7 +24,6 @@ public class DropControl : MonoBehaviour
 
     void OnMouseExit()
     {
-        cellDetect = false;
         gameObject.name = "Cell";
     }
 

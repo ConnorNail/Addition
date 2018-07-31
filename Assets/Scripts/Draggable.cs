@@ -9,7 +9,7 @@ public class Draggable : MonoBehaviour {
     public GameObject draggedTile;
     public GameObject cell;
 
-    private bool? cellDetect;
+    private bool cellDetect;
 
     private float xScale;
     private float yScale;
@@ -43,15 +43,11 @@ public class Draggable : MonoBehaviour {
         //Snap tile into place on drag over cell
         if (cell == null) {
             transform.position = objectPos;
+            cellDetect = false;
         } else {
-            cellDetect = cell.GetComponent<DropControl>().cellDetect;
-            print(cellDetect);
-        }
-
-        if (cellDetect == true) {
             transform.position = cell.GetComponent<DropControl>().cellPos;
-        } else {
-            transform.position = objectPos;
+            cellDetect = true;
+            //print(cellDetect);
         }
     }
 
@@ -59,5 +55,12 @@ public class Draggable : MonoBehaviour {
     {
         //Return scale of tile to original
         transform.localScale = new Vector3(xScale, yScale, 1F);
+
+        //Determine if tile was dropped on a cell
+        if (cell != null) {
+            cellDetect = true;
+        } else {
+            cellDetect = false;
+        }
     }
 }

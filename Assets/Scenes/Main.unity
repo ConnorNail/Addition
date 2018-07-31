@@ -202,6 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3e444c9b1814561baadf62816aa336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draggedTile: {fileID: 0}
+  cell: {fileID: 0}
 --- !u!1001 &418797149
 Prefab:
   m_ObjectHideFlags: 0
@@ -262,22 +264,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 145640b335dd74fb087941342448ef65, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &420800812 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1902219939406144, guid: dc60286257fd04e8088e6c28b4dc31c8,
-    type: 2}
-  m_PrefabInternal: {fileID: 662408841}
---- !u!114 &420800816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 420800812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83943bd3c16304ad9b675d5692cfbd14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &662408841
 Prefab:
   m_ObjectHideFlags: 0
@@ -285,40 +271,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalPosition.x
       value: 5.01
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalPosition.y
       value: 2.48
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalPosition.z
       value: -5.9701385
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4021547390385630, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+    - target: {fileID: 4986715956543976, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: dc60286257fd04e8088e6c28b4dc31c8, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &993554012
 GameObject:
@@ -407,11 +393,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tile: {fileID: 1407896278922734, guid: 145640b335dd74fb087941342448ef65, type: 2}
+  Cell: {fileID: 1510363351839292, guid: e143c0e9dfea940f69358fbed9a9b8bb, type: 2}
   columbLength: 3
   rowLength: 3
   numMin: 1
   numMax: 5
-  difficulty: 4
+  difficulty: 6
   puzzlePieceCounter: 0
   boardTiles: []
   answerTiles: []

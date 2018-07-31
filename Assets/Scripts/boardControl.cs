@@ -5,6 +5,7 @@ using UnityEngine;
 public class boardControl : MonoBehaviour {
     
     public GameObject Tile;
+    public GameObject Cell;
 
     public int columbLength;
     public int rowLength;
@@ -120,6 +121,15 @@ public class boardControl : MonoBehaviour {
             //Move tiles from board list to puzzle list
             puzzlePieces.Add(boardTiles[randomIndex]);
             boardTiles.RemoveAt(randomIndex);
+
+            //Find positions for cells
+            Vector3 pos = new Vector3(puzzlePieces[i].transform.position.x, puzzlePieces[i].transform.position.y);
+
+            //Add a cell where each tile is
+            GameObject boardCells = Instantiate(Cell, pos, Quaternion.identity) as GameObject;
+
+            //Name each Cell
+            boardCells.name = "Cell" + i;
         }
     }
 
